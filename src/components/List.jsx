@@ -18,8 +18,9 @@ const List = () => {
         <ul>            
         { 
             data.length == 0 
-                ? <span>Loading...</span> 
-                :
+            ? 
+            <span>Loading...</span> 
+            :
             data.map((item)=>{
                 return <li key={item.id}>{item.name}</li>
             })

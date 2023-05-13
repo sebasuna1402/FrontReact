@@ -1,9 +1,23 @@
-import { useEffect, useState } from 'react';
-import Counter2 from './Counter2'
+import { useContext, useEffect, useState } from 'react';
+import CounterContext from '../main';
 
 const Counter = (props) => {
- 
+
+ const counterFromContext = useContext(CounterContext);
+
+ console.log(counterFromContext);
+
  const [counter, setCounter] = useState(0)
+
+ let array = [1,2,3,4];
+ let newArray = [...array,5];
+
+ let objeto = {id:1,name:"Test"};
+ let nuevoObjeto = {...objeto,lastName:"TestLastName"};
+
+ console.log(nuevoObjeto);
+
+ console.log(newArray);
 
  useEffect(() => {
   console.log("useEffect solo al cargar");
@@ -23,9 +37,6 @@ const Counter = (props) => {
     console.log("Destroy");
   };
 }, [])
-
- 
-  
   
   const aumentar = () => {
     setCounter((currentCounter) => currentCounter  + 1);
@@ -42,7 +53,7 @@ const Counter = (props) => {
   return (
     <div>
         <button onClick={restar}>-</button>
-        <div>{counter}</div>        
+        <div>{counterFromContext}</div>  
         <button onClick={aumentar}>+</button>
         <button onClick={reset}>Reset</button>
     </div>

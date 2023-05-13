@@ -4,10 +4,21 @@ import './index.css'
 
 import Counter from './components/Counter'
 import List from './components/List'
+import Counter2 from './components/Counter2'
+import ListPhotos from './components/ListPhotos'
+import { ListPhotosFromHook } from './components/ListPhotosFromHook'
+
+const CounterContext = React.createContext(0);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <Counter number={5}/> */}
-    <List/>
+    {/* <CounterContext.Provider value={55}>
+      <Counter/>
+      <Counter2/>
+    </CounterContext.Provider> */}
+    {/* <ListPhotos/> */}
+    <ListPhotosFromHook/>
   </React.StrictMode>,
 )
+
+export default CounterContext;
