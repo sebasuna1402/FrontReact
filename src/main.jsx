@@ -5,20 +5,28 @@ import { Layout } from './pages/_layout/Layout'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/home/Home'
 import About from './pages/about/About'
+import ListCompanies from './pages/companies/ListCompanies'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
 // const CounterContext = React.createContext(0);
+const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter>
+  <QueryClientProvider client={queryClient}>
+    <React.StrictMode>
+    
+      <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/companies" element={<ListCompanies />} />
         </Route>
       </Routes>
-    </BrowserRouter>
-  </React.StrictMode>,
+      </BrowserRouter>
+    
+  </React.StrictMode>
+  </QueryClientProvider>,
 )
 
 // export default CounterContext;

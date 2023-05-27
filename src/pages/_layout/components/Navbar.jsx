@@ -9,6 +9,9 @@ const Navbar = () => {
             <NavLink
                 className='link parent-item capitalize nav-link'
                 to="about">About</NavLink >
+            <NavLink
+                className='link parent-item capitalize nav-link'
+                to="companies">List Companies</NavLink >
         </nav>
     )
 }
