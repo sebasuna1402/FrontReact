@@ -7,6 +7,7 @@ import Home from './pages/home/Home'
 import About from './pages/about/About'
 import ListCompanies from './pages/companies/ListCompanies'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import ListOffers from './pages/offers/ListOffers'
 
 // const CounterContext = React.createContext(0);
 const queryClient = new QueryClient()
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/companies" element={<ListCompanies />} />
+          <Route path="/offers" element={<ListOffers />} />
         </Route>
       </Routes>
       </BrowserRouter>

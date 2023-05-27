@@ -1,9 +1,11 @@
-import { useQuery } from "react-query"
-import { getCompanies } from "../../services/CompanyService"
+import { useQuery } from "react-query";
+import AddCompany from "./components/AddCompany";
+import { getCompanies } from "../../services/CompanyService";
 
 const ListCompanies = () => {
 
   const { data, isLoading, isError } = useQuery('companies', getCompanies);
+ 
 
   if(isLoading)
     return <div>Loading...</div>
@@ -11,9 +13,19 @@ const ListCompanies = () => {
   if(isError)
     return <div>Error</div>
 
-
   return (
-    <div>{JSON.stringify(data)}</div>
+    <>
+      <AddCompany/>
+      <div className="list-companies">
+      {
+        data.map((company)=>(
+          <div className="div-company" key={company.id}>
+            {company.name}
+          </div>
+        ))
+      }
+      </div>
+    </>
   )
 }
 

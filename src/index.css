@@ -79,3 +79,30 @@ button:focus-visible {
   border: 1px solid whitesmoke;
   border-radius: 8px;
 }
+.list-offers{
+  padding-top: 5%;
+}
+.div-company{
+  border: 2px solid lightgray;
+  border-radius: 8px;
+  padding: 3%;
+}
+
+.div-offer{
+  border: 2px solid lightgray;
+  border-radius: 8px;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.list-offers{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+
+.offer-title{
+  color: yellow;
+}
