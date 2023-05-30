@@ -1,21 +1,21 @@
 import { useRef } from "react";
-import { QueryClient, useMutation } from "react-query";
+import { useMutation, useQueryClient } from "react-query";
 import { create } from "../../../services/CompanyService";
 
 const AddCompany = () => {
-
-  const queryClient = new QueryClient()
+  const queryClient = useQueryClient()
   const companyName = useRef(null);
+
   const mutation = useMutation("company", create,
    { onSettled:() => queryClient.invalidateQueries("companies"),
      mutationKey: "company" }
   )
 
-  const handleSave = () =>{
+  const handleSave = () => {
     let newCompany = {
         name:companyName.current.value
     };
-    mutation.mutateAsync(newCompany)
+    mutation.mutateAsync(newCompany);
   }
 
   return (

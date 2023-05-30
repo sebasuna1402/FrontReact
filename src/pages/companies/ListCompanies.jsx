@@ -4,8 +4,8 @@ import { getCompanies } from "../../services/CompanyService";
 
 const ListCompanies = () => {
 
-  const { data, isLoading, isError } = useQuery('companies', getCompanies);
- 
+  const { data, isLoading, isError } = useQuery('companies', getCompanies,{ enabled: true });
+
 
   if(isLoading)
     return <div>Loading...</div>
