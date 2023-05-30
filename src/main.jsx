@@ -13,7 +13,7 @@ import ListOffers from './pages/offers/ListOffers'
 const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <QueryClientProvider client={queryClient}>
+  
     <React.StrictMode>
     
       <BrowserRouter>
@@ -28,7 +28,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </BrowserRouter>
     
   </React.StrictMode>
-  </QueryClientProvider>,
 )
 
 // export default CounterContext;
