@@ -3,7 +3,7 @@ import { getOffers } from "../../services/OfferService"
 
 const ListOffers = () => {
 
-  const { data, isLoading, isError } = useQuery('offers', getOffers);
+  const { data, isLoading, isError } = useQuery('offers', getOffers, {staleTime:5000});
 
   if(isLoading)
     return <div>Loading...</div>
