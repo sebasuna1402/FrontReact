@@ -6,16 +6,14 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/home/Home'
 import About from './pages/about/About'
 import ListCompanies from './pages/companies/ListCompanies'
-import { QueryClient, QueryClientProvider } from 'react-query'
 import ListOffers from './pages/offers/ListOffers'
+import Menu from './components/Menu'
 
 // const CounterContext = React.createContext(0);
-const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   
-    <React.StrictMode>
-    
+    <React.StrictMode>    
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -23,10 +21,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/about" element={<About />} />
           <Route path="/companies" element={<ListCompanies />} />
           <Route path="/offers" element={<ListOffers />} />
+          <Route path="/menu" element={<Menu />} />
         </Route>
       </Routes>
-      </BrowserRouter>
-    
+      </BrowserRouter>    
   </React.StrictMode>
 )
 
