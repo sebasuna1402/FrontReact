@@ -18,6 +18,9 @@ const Navbar = () => {
             <NavLink
                 className='link parent-item capitalize nav-link'
                 to="menu">Menu JSON</NavLink >
+            <NavLink
+                className='link parent-item capitalize nav-link'
+                to="debounce">Debounce Time</NavLink >
         </nav>
     )
 }

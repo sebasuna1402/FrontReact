@@ -10,6 +10,8 @@ import ListOffers from './pages/offers/ListOffers'
 import Menu from './components/Menu'
 
 // const CounterContext = React.createContext(0);
+import menuJson from '../src/utils/json/categories.json'
+import DebounceTime from './components/DebounceTime'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   
@@ -21,7 +23,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/about" element={<About />} />
           <Route path="/companies" element={<ListCompanies />} />
           <Route path="/offers" element={<ListOffers />} />
-          <Route path="/menu" element={<Menu />} />
+          <Route path="/menu" element={<Menu data={menuJson} />} />
+          <Route path="/debounce" element={<DebounceTime />} />
         </Route>
       </Routes>
       </BrowserRouter>    
