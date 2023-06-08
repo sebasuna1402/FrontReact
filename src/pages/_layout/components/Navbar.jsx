@@ -8,19 +8,13 @@ const Navbar = () => {
                 to="home">Home</NavLink >
             <NavLink
                 className='link parent-item capitalize nav-link'
-                to="about">About</NavLink >
+                to="AddCandidate">Add Candidate</NavLink >
             <NavLink
                 className='link parent-item capitalize nav-link'
-                to="companies">List Companies</NavLink >
+                to="ListCandidates">List of Candidates</NavLink >
             <NavLink
                 className='link parent-item capitalize nav-link'
                 to="offers">List Offers</NavLink >
-            <NavLink
-                className='link parent-item capitalize nav-link'
-                to="menu">Menu JSON</NavLink >
-            <NavLink
-                className='link parent-item capitalize nav-link'
-                to="debounce">Debounce Time</NavLink >
         </nav>
     )
 }
