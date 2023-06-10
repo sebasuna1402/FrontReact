@@ -9,6 +9,7 @@ import AddCandidate from './pages/candidates/components/AddCandidate'
 import ListOffers from './pages/offers/ListOffers'
 
 
+
 // const CounterContext = React.createContext(0);
 
 
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/AddCandidate" element={<AddCandidate/>} />
           <Route path="/ListCandidates" element={<ListCandidates />} />
           <Route path="/offers" element={<ListOffers />} />
+          
         </Route>
       </Routes>
       </BrowserRouter>    
